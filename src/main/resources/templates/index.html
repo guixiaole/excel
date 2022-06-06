@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" th:href="@{/css/allrecord.css}" />
+    <title>莱杰轨道全程记录</title>
+  </head>
+  <body>
+  <form th:action="@{/upload}"   method="post"    enctype="multipart/form-data">
+    <input type="file" id="file" name="file" >
+    <button type="submit" style="width: 80px;height:30px"></button>
+  </form>
+  </body>
+
+</html>

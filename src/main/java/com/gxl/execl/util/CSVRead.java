@@ -15,8 +15,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CSVRead {
-    public static void CSVDelete(String realPath)throws IOException, ParseException{
-        File fileDes = new File(realPath);
+    public static void CSVDelete( File fileDes)throws IOException, ParseException{
+//        File fileDes = new File(realPath);
 //        InputStream str = new FileInputStream(fileDes);
 //        Workbook book = new HSSFWorkbook(str);
         Workbook book = null;
@@ -37,7 +37,7 @@ public class CSVRead {
 //            if (rows-i<4){
 //                break;
 //            }
-            System.out.println(i);
+//            System.out.println(i);
             String event = String.valueOf(sheet.getRow(i).getCell(1));
 
             System.out.println(event);
@@ -193,6 +193,6 @@ public class CSVRead {
     }
     public static void main(String[] args) throws IOException, ParseException {
         String realPath = "src/main/java/com/gxl/execl/util/K769-7120704-7120256K0.0411F.xlsx";
-        CSVRead.CSVDelete(realPath);
+//        CSVRead.CSVDelete(realPath);
     }
 }
