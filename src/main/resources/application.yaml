@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/train?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: glqq616098292
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    com:
+      gxl:
+        trainerror:
+          mapper: debug

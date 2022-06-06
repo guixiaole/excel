@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" th:href="@{/css/allrecord.css}" />
+    <title>莱杰轨道全程记录</title>
+  </head>
+  <body>
+    <div>
+      <table cellpadding="0" cellspacing="0" id = "table_quancheng">
+        <thead>
+          <tr>
+            <th>序号</th>
+            <th style="width: 100px">事件</th>
+            <th style="width: 100px">时间</th>
+            <th style="width: 100px">公里标</th>
+            <th style="width: 100px">其它</th>
+            <th>距离</th>
+            <th>信号机</th>
+            <th>信号</th>
+            <th>速度</th>
+            <th>限速</th>
+            <th>零位</th>
+            <th>牵引</th>
+            <th>前后</th>
+            <th>管压</th>
+            <th>缸压</th>
+            <th style="width: 50px">转速电流</th>
+            <th>均缸1</th>
+            <th>均缸2</th>
+          </tr>
+        </thead>
+
+        <tbody id = "tbody_quancheng">
+          <tr th:each="quancheng,indexState :${quanChengs}" class="tr_quancheng" >
+            <td th:if="${quancheng.xuHao}=='null'"> </td>
+            <td th:if="${quancheng.xuHao}!='null'">[[${quancheng.xuHao}]]</td>
+            <td th:if="${quancheng.event}=='null'"> </td>
+            <td th:if="${quancheng.event}!='null'">[[${quancheng.event}]]</td>
+            <td th:if="${quancheng.dateTime}=='null'"> </td>
+            <td th:if="${quancheng.dateTime}!='null'" class="timeformat" style="width: 100px">[[${quancheng.dateTime}]]</td>
+            <td th:if="${quancheng.gongLiBiao}=='null'"> </td>
+            <td th:if="${quancheng.gongLiBiao}!='null'"  style="width: 100px" >[[${quancheng.gongLiBiao}]]</td>
+
+            <td th:if="${quancheng.other}=='null'"> </td>
+            <td th:if="${quancheng.other}!='null'" style="width: 100px">[[${quancheng.other}]]</td>
+            <td th:if="${quancheng.distance}=='null'"> </td>
+            <td th:if="${quancheng.distance}!='null'" >[[${quancheng.distance}]]</td>
+            <td th:if="${quancheng.signalMachine}=='null'"> </td>
+            <td th:if="${quancheng.signalMachine}!='null'">[[${quancheng.signalMachine}]]</td>
+            <td th:if="${quancheng.xinHao}=='null'"></td>
+            <td th:if="${quancheng.xinHao}!='null'">[[${quancheng.xinHao}]]</td>
+            <td th:if="${quancheng.speed}=='null'"></td>
+            <td th:if="${quancheng.speed}!='null'">[[${quancheng.speed}]]</td>
+            <td th:if="${quancheng.restrictSpeed}=='null'"></td>
+            <td th:if="${quancheng.restrictSpeed}!='null'">[[${quancheng.restrictSpeed}]]</td>
+            <td th:if="${quancheng.lingWei}=='null'"></td>
+            <td th:if="${quancheng.lingWei}!='null'">[[${quancheng.lingWei}]]</td>
+            <td th:if="${quancheng.qianYin}=='null'"></td>
+            <td th:if="${quancheng.qianYin}!='null'">[[${quancheng.qianYin}]]</td>
+            <td th:if="${quancheng.qianHou}=='null'"></td>
+            <td th:if="${quancheng.qianHou}!='null'">[[${quancheng.qianHou}]]</td>
+            <td th:if="${quancheng.guanYa}=='null'"></td>
+            <td th:if="${quancheng.guanYa}!='null'">[[${quancheng.guanYa}]]</td>
+            <td th:if="${quancheng.gangYa}=='null'"></td>
+            <td th:if="${quancheng.gangYa}!='null'">[[${quancheng.gangYa}]]</td>
+            <td th:if="${quancheng.zhuanSuDianLiu}=='null'"></td>
+            <td th:if="${quancheng.zhuanSuDianLiu}!='null'" style="width: 50px">[[${quancheng.zhuanSuDianLiu}]]</td>
+            <td th:if="${quancheng.junGang1}=='null'"></td>
+            <td th:if="${quancheng.junGang1}!='null'">[[${quancheng.junGang1}]]</td>
+            <td th:if="${quancheng.junGang2}=='null'"></td>
+            <td th:if="${quancheng.junGang2}!='null'">[[${quancheng.junGang2}]]</td>
+          </tr>
+        </tbody>
+      </table>
+  </body>
+
+</html>
